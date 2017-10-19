@@ -35,6 +35,7 @@ public class Serializacion1 {
         try {
             ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(ruta));
             oos.writeObject(objeto);
+            oos.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Serializacion1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
