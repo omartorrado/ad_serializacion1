@@ -48,6 +48,7 @@ public class Serializacion1 {
         try {
             ObjectInputStream ois=new ObjectInputStream(new FileInputStream(ruta));
             objetoLeido=(Mclase)ois.readObject();
+            ois.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Serializacion1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
